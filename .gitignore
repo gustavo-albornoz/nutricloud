@@ -1,0 +1,7 @@
+# archivos de proyecto
+*.csproj
+*.csproj.user
+*.sln
+
+# archivos de configuracion
+*.config
