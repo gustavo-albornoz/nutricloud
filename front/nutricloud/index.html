@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Nutricloud</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet" >
+  <link rel="stylesheet" type="text/css" href="js/jquery.min.js">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="js/modernizr.js"></script> 
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body id="top" class="scrollspy">
+
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+  </div>
+
+  <div class="section no-pad-bot ptop" id="index-banner">
+    <div class="navbar-fixed">
+      <nav id="nav_f" class="header-index" role="navigation">
+        <div class="container">
+          <div class="nav-wrapper sticky">
+            <a id="logo-container" href="#top" class="brand-logo">
+              <img src="img/logo.png">Nutricloud
+            </a>
+            <ul id="nav-mobile" class="right side-nav">
+              <li><a href="#intro">Diario</a></li>
+              <li><a href="#work">Comunidad</a></li>
+              <li><a href="#contact">Nosotros</a></li>
+              <li>
+                <a class="modal-trigger" href="#modal1">Iniciar Sesión</a>
+                   <!-- Modal -->
+                    <div id="modal1" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                        <h4>Iniciar Sesión</h4>
+                           <div class="row">
+                            <form class="col s12">
+                              <div class="row">
+                                <div class="col s12">
+                                 <div class="input-field col s12">
+                                 <input id="email" type="email" class="validate">
+                                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                                </div><!--/.input-->
+                              </div><!--/.col s12-->
+                            </div>
+                              <div class="row">
+                                <div class="col s12">
+                                 <div class="input-field col s12">
+                                 <input id="password" type="password" class="validate">
+                                  <label for="password" data-error="wrong" data-success="right">Contraseña</label>
+                                </div><!--/.input-->
+                              </div><!--/.col s12-->
+                            </div>
+                            </form>
+                          </div>
+                        </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close green-nutri btn-flat ">Ingresar</a>
+                      </div>
+                    </div>
+              </li>
+            </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container index-banner">
+      <!--<h2 class="text_h center header cd-headline letters type">
+      <span>Tu aplicación para estar</span> 
+        <span class="cd-words-wrapper waiting">
+          <b class="is-visible">saludable</b>
+          <b>feliz</b>
+          <b>bien</b>
+        </span>
+      </h2>-->
+      <!--<h1>
+        Tu aplicación para estar Saludable
+      </h1>
+      <p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat</p>
+      <a href="#">Regístrate</a>-->
+      <div class="row">
+        <div class="col l8 m12 s12 titulo-index">
+          <h1>Sentite saludable con Nutricloud
+            <!--<span class="cd-words-wrapper waiting">
+              <b class="is-visible">bien</b>
+              <b>feliz</b>
+              <b>saludable</b>
+            </span>-->
+          </h1>
+          <h4>La aplicación que te ayuda a sentirte bien y bajar de peso</h4>
+        </div><!--/.col7-->
+        <div class="col l4 m12 s12 pcipal-index">
+          <div class="row">
+            <div class="col s12">
+             <div class="input-field mtop col s12">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Nombre</label>
+            </div><!--/.input-->
+          </div><!--/.col s12-->
+        </div><!--/.row-->
+        <div class="row">
+          <div class="col s12">
+           <div class="input-field col s12">
+            <input id="last_name" type="password" class="validate">
+            <label for="last_name">Contraseña</label>
+          </div><!--/.input-->
+        </div><!--/.col s12-->
+      </div><!--/.row-->
+      <div class="row">
+        <div class="col s12">
+         <div class="input-field col s12">
+          <input id="last_name" type="password">
+          <label for="last_name">Repita Contraseña</label>
+        </div><!--/.input-->
+      </div><!--/.col s12-->
+    </div><!--/.row-->
+    <div class="row">
+      <button class="btn waves-effect green-nutri" type="submit" name="action">Registrarse</button>
+    </div><!--/.row-->
+  </div><!--/.col5-->
+</div><!--/.row-->
+</div><!--/.container-->
+</div><!--/.section no-pad-bot ptop-->
+
+<div id="intro" class="section scrollspy npad">
+  <div class="container">
+    <!--   Icon Section   -->
+    <div class="row">
+      <div  class="col s12">
+        <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span </h2>
+      </div>
+
+      <div  class="col s12 m4 l4">
+        <div class="center promo promo-example">
+          <i class="material-icons">library_books</i>
+          <h5 class="promo-caption">Diario Alimentario</h5>
+          <p class="light center">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.</p>
+        </div>
+      </div>
+      <div class="col s12 m4 l4">
+        <div class="center promo promo-example">
+          <i class="material-icons">trending_up</i>
+          <h5 class="promo-caption">Seguimiento Personalizado</h5>
+          <p class="light center">By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.</p>
+        </div>
+      </div>
+      <div class="col s12 m4 l4">
+        <div class="center promo promo-example">
+           <i class="material-icons">done</i>
+          <h5 class="promo-caption">Easy to work with</h5>
+          <p class="light center">We have provided detailed documentation as well as specific code examples to help new users get started.</p>
+        </div>
+      </div>
+    </div><!--/.row-->
+  </div><!--/.container-->
+
+
+<div class="section scrollspy" id="work">
+ <div class="container">
+    <h2 class="header text_b"> Last Work </h2>
+    <div class="row">
+      <div class="col s12 m4 l4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="img/03.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4 l4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator"  src="img/04.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4 l4">
+       <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator"  src="img/03.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      </div>
+    </div><!--/.row-->
+  </div>
+</div>
+
+
+
+
+<footer id="contact" class="page-footer green-nutri scrollspy">
+  <div class="container">  
+   <div class="row nobottom">
+
+    <div class="col l6 s12">
+      <h5 class="white-text">Bio</h5>
+      <p class="grey-text text-lighten-4">
+        We are a team of college students working on this project like it's our full time job. 
+        Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Nutricloud</h5>
+        <ul>
+          <li><a class="white-text" href="http://www.andreagalanti.it/">Home</a></li>
+          <li><a class="white-text" href="http://www.andreagalanti.it/lab">Lab</a></li>
+          <li><a class="white-text" href="http://www.andreagalanti.it/portfolio">Work</a></li>
+          <li><a class="white-text" href="http://www.andreagalanti.it/">Contact</a></li>
+
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Social</h5>
+        <ul>
+          <li><a class="white-text" href="https://dribbble.com/andreagalanti">Dribbble</a></li>
+          <li><a class="white-text" href="https://www.facebook.com/andreagalantiwebdesign">Facebook</a></li>
+          <li><a class="white-text" href="https://twitter.com/GalantiAndrea">Twitter</a></li>
+          <li><a class="white-text" href="https://plus.google.com/u/0/+AndreaGalantiandreagalanti">Google+</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="footer-copyright  grey darken-3">
+    <div class="container">
+      Made by <a class="white-text" href="#">Nutricloud</a>
+    </div>
+  </div>-->
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<!--script nav-->
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 550){  
+      $('nav').addClass("sticky");
+    }
+    else{
+      $('nav').removeClass("sticky");
+    }
+  });
+</script>
+
+<!--Modal-->
+<script>
+ $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>
+</body>
+</html>
