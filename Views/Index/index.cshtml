@@ -1,0 +1,353 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>nutricloud</title>
+
+    <!-- CSS  -->
+    <link href="../../content/materialize.css" type="text/css" rel="stylesheet">
+    <link href="../../content/style.css" type="text/css" rel="stylesheet">
+    <link href="../../content/responsive.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../scripts/jquery.min.js">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="../../scripts/modernizr.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300|Righteous' rel='stylesheet' type='text/css'>
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../content/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../content/img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../content/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../content/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../content/img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../content/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../content/img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../content/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../content/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../content/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../content/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../content/img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../content/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../../content/img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../content/img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body id="top" class="scrollspy">
+      <!-- Pre Loader -->
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+
+            </div>
+
+            <div class="section no-pad-bot ptop" id="index-banner">
+                <div class="navbar-fixed">
+                    <nav id="nav_f" class="header-index" role="navigation">
+                        <div class="container">
+                            <div class="nav-wrapper sticky">
+                                <a id="logo-container" href="#top" class="brand-logo">
+                                    <img src="../../content/img/logo.png">nutricloud
+                                </a>
+                                <ul id="nav-mobile" class="right side-nav">
+                                    <li><a href="#intro">Diario</a></li>
+                                    <li><a href="#work">Comunidad</a></li>
+                                    <li><a href="#contact">Nosotros</a></li>
+                                    <li>
+                                        <a class="modal-trigger" href="#modal1">Iniciar Sesión</a>
+                                        <!-- Modal -->
+                                        <div id="modal1" class="modal modal-fixed-footer">
+                                            <div class="modal-content">
+                                                <h4>Iniciar Sesión</h4>
+                                                <div class="row">
+                                                    <form class="col s12">
+                                                        <div class="row">
+                                                            <div class="col s12">
+                                                                <div class="input-field col s12">
+                                                                    <input id="email" type="email" class="validate">
+                                                                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                                                                </div><!--/.input-->
+                                                            </div><!--/.col s12-->
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col s12">
+                                                                <div class="input-field col s12">
+                                                                    <input id="password" type="password" class="validate">
+                                                                    <label for="password" data-error="wrong" data-success="right">Contraseña</label>
+                                                                </div><!--/.input-->
+                                                            </div><!--/.col s12-->
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#!" class="modal-action modal-close green-nutri btn-flat ">Ingresar</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" data-activates="nav-mobile" class="button-collapse">
+                                     <i class="material-icons">menu</i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="container index-banner">
+                    <div class="row">
+                        <div class="col l8 m12 s12 titulo-index">
+                            <h1>
+                                Sentite saludable con Nutricloud
+                            </h1>
+                            <h4>La aplicación que te ayuda a alimentarte bien y lograr tu peso ideal.</h4>
+                        </div><!--/.col7-->
+                        <div class="col l4 m12 s12 pcipal-index">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field mtop col s12">
+                                        <input id="email" type="text" class="validate">
+                                        <label for="email">Email</label>
+                                    </div><!--/.input-->
+                                </div><!--/.col s12-->
+                            </div><!--/.row-->
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field col s12">
+                                        <input id="last_name" type="password" class="validate">
+                                        <label for="last_name">Contraseña</label>
+                                    </div><!--/.input-->
+                                </div><!--/.col s12-->
+                            </div><!--/.row-->
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field col s12">
+                                        <input id="last_name" type="password">
+                                        <label for="last_name">Repita Contraseña</label>
+                                    </div><!--/.input-->
+                                </div><!--/.col s12-->
+                            </div><!--/.row-->
+                            <div class="row">
+                                <button class="btn waves-effect green-nutri" type="submit" name="action">Registrarse</button>
+                            </div><!--/.row-->
+                        </div><!--/.col5-->
+                    </div><!--/.row-->
+                </div><!--/.container-->
+            </div><!--/.section no-pad-bot ptop-->
+   
+            <div id="intro" class="section scrollspy npad">
+                <div class="container" id="scrollf">
+                    <!--   Icon Section   -->
+                    <div class="row">
+                        <div class="col s12">
+                            <h2 class="center header text_h2">
+                                Nada mejor que una aplicación para tu salud.
+                                <span class="span_h2"> nutricloud </span>te ofrece un control <span class="span_h2">24x7</span>, analizando tu alimentación y haciendo sugerencias en base a tu objetivo.
+                            </h2>
+                        </div>
+
+                        <div class="col s12 m4 l4">
+                            <div class="center promo promo-example">
+                                <i class="material-icons">library_books</i>
+                                <h5 class="promo-caption">Diario Alimentario</h5>
+                                <p class="light center">Ingresá tu alimentación diaria y tu ingesta de líquidos; contamos con miles de opciones.</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <div class="center promo promo-example">
+                                <i class="material-icons">trending_up</i>
+                                <h5 class="promo-caption">Seguimiento Personalizado</h5>
+                                <p class="light center">Analizamos tu dieta y te ofrecemos alimentos alternativos para lograr tu objetivo.</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <div class="center promo promo-example">
+                                <i class="material-icons">done</i>
+                                <h5 class="promo-caption">Asesoramiento</h5>
+                                <p class="light center">Contamos con un grupo de profesionales para responder a todas tus preguntas.</p>
+                            </div>
+                        </div>
+                    </div><!--/.row-->
+                </div><!--/.container-->
+           </div>
+                <div class="container-resp green-nutri">
+                    <div class="row row-resp">
+                        <div class="resp-align">
+                            <div class="col s12 m12 l6 txt-resp">
+                                <p>
+                                    <h3>
+                                        Podés disfrutar de nutricloud en cualquier dispositivo que tengas sin necesidad de instalar nada.
+                                        <br> Es simple, rápido y cómodo!
+                                    </h3>
+                                </p>
+                            </div>
+                            <div class="col s12 m12 l6 img-resp">
+                                <img class="responsive-img" src="../../content/img/responsive.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section scrollspy" id="work">
+                    <div class="container">
+                        <h3 class="header text_b"> Cómo funciona?</h3>
+                        <div class="row">
+                            <div class="col s12 m4 l4">
+                                <div class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="../../content/img/card3.jpg">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">Base de datos
+                                        <i class="material-icons right icon-plus">add</i></span>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Base de datos de alimentos
+                                            <i class="material-icons right icon-plus">clear</i></span>
+                                        <p>Contamos con alimentos y productos alimenticios por peso, cantidad y porciones. También podés averiguar los valores nutricionales de los mismos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4 l4">
+                                <div class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="../../content/img/card2.jpg">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">
+                                            Estadísticas 
+                                            <i class="material-icons right icon-plus">add</i>
+                                        </span>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Estadísticas de tu progreso 
+                                            <i class="material-icons right icon-plus">clear</i>
+                                        </span>
+                                        <p>Si necesitás un reporte de tu evolución, podrás descargarlo con todo el detalle de tu ingesta y la evolución de tu peso.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4 l4">
+                                <div class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="../../content/img/card4.jpg">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator grey-text text-darken-4">
+                                            Blog de nutrición
+                                            <i class="material-icons right icon-plus">add</i>
+                                        </span>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Blog de nutrición
+                                        <i class="material-icons right icon-plus">clear</i>
+                                        </span>
+                                        <p>Los mejores posts de nutrición con recetas, tips y noticias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/.row-->
+                    </div>
+                </div>
+
+
+
+
+                <footer id="contact" class="page-footer scrollspy">
+                    <div class="container">
+                        <div class="row nobottom">
+
+                            <div class="col l6 s12">
+                                <h5 class="white-text">Bio</h5>
+                                <p class="grey-text text-lighten-4">
+                                    We are a team of college students working on this project like it's our full time job.
+                                    Any amount would help support and continue development on this project and is greatly appreciated.
+                                </p>
+
+
+                            </div>
+                            <div class="col l3 s12">
+                                <h5 class="white-text">nutricloud</h5>
+                                <ul>
+                                    <li><a class="white-text" href="#">Home</a></li>
+                                    <li><a class="white-text" href="#">Social</a></li>
+                                    <li><a class="white-text" href="#">Diario</a></li>
+                                    <li><a class="white-text" href="#">Contacto</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="col l3 s12">
+                                <h5 class="white-text">Social</h5>
+                                <ul>
+                                    <li><a class="white-text" href="#">Instagram</a></li>
+                                    <li><a class="white-text" href="#">Facebook</a></li>
+                                    <li><a class="white-text" href="#">Twitter</a></li>
+                                    <li><a class="white-text" href="#">Google+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                <div class="footer-copyright  grey darken-3">
+                  <div class="container">
+                    Made by <a class="white-text" href="#">Nutricloud</a>
+                  </div>
+                </div>-->
+                </footer>
+
+
+                <!--  Scripts-->
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="../scripts/materialize.js"></script>
+                <script src="../scripts/init.js"></script>
+
+                <!--script nav-->
+                <script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 550){
+      $('nav').addClass("sticky");
+    }
+    else{
+      $('nav').removeClass("sticky");
+    }
+  });
+                </script>
+
+                <!--Modal-->
+                <script>
+ $(document).ready(function(){
+    $('.modal-trigger').leanModal();
+  });
+                </script>
+                <script type="text/javascript">
+
+ $(document).ready(function(){
+
+  var options = [
+
+
+            {selector: '#scrollf', offset: 10, callback: function()
+
+            { Materialize.showStaggeredList("#scrollf"); } },
+
+                 ];
+
+            Materialize.scrollFire(options);
+
+ });
+                </script>
+        </body>
+    </html>
+
