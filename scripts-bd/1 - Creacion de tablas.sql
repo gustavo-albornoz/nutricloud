@@ -272,11 +272,27 @@ GO
 ALTER TABLE [dbo].[blog_nota] CHECK CONSTRAINT [FK_blog_nota_usuario]
 GO
 
-Create table usuario_receta (
-	id_usuario_receta int identity(1,1) not null,
-	receta text not null,
-	titulo_receta varchar(50) not null,
-	f_receta datetime not null,
-	id_usuario int not null
-)
+CREATE TABLE [dbo].[usuario_receta](
+	[id_usuario_receta] [int] IDENTITY(1,1) NOT NULL,
+	[receta] [text] NOT NULL,
+	[titulo_receta] [varchar](50) NOT NULL,
+	[f_receta] [datetime] NOT NULL,
+	[id_usuario] [int] NOT NULL,
+ CONSTRAINT [PK_usuario_receta] PRIMARY KEY CLUSTERED 
+(
+	[id_usuario_receta] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[usuario_receta]  WITH CHECK ADD  CONSTRAINT [FK_usuario_receta_usuario] FOREIGN KEY([id_usuario])
+REFERENCES [dbo].[usuario] ([id_usuario])
+GO
+
+ALTER TABLE [dbo].[usuario_receta] CHECK CONSTRAINT [FK_usuario_receta_usuario]
+GO
 
