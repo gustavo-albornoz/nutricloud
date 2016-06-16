@@ -3,9 +3,14 @@
 *.csproj.user
 *.sln
 *.suo
+*.pdb
+*.dll
 
 # archivos de configuracion
 *.config
 
 #Otros
 *.cache
+
+#Carpetas enteras (?
+obj/Debug/
