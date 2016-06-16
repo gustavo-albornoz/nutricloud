@@ -7,6 +7,7 @@ drop table usuario_alimento
 drop table comida_tipo
 drop table alimento
 drop table alimento_tipo
+drop table alimento_genero
 drop table usuario_receta
 drop table usuario_muro
 drop table usuario_datos
@@ -20,6 +21,12 @@ create table alimento_tipo (
 	id_alimento_tipo int identity(1,1) primary key,
 	alimento_tipo varchar(30) not null,
 	unidad_medida varchar(2) not null
+)
+GO
+-- carnes, pescados, lacteos...
+create table alimento_genero (
+	id_alimento_genero int identity(1,1) primary key,
+	alimento_genero varchar(30) not null
 )
 GO
 CREATE TABLE [dbo].[alimento](
@@ -51,14 +58,22 @@ CREATE TABLE [dbo].[alimento](
 	[proteinas_g] [decimal](10, 3) NULL default 0,
 	[agp_w6_g] [decimal](10, 3) NULL default 0,
 	[agp_w3_g] [decimal](10, 3) NULL default 0,
-	[porcion] [decimal](10, 3) NULL default 0,
-	[id_alimento_tipo] [int] NOT NULL default 0,
+	[porcion] [decimal](10, 3) NOT NULL,
+	[id_alimento_tipo] [int] NOT NULL,
+	[id_alimento_genero] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[id_alimento] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
+GO
+
+ALTER TABLE [dbo].[alimento]  WITH CHECK ADD  CONSTRAINT [FK_alimento_alimento_genero] FOREIGN KEY([id_alimento_genero])
+REFERENCES [dbo].[alimento_genero] ([id_alimento_genero])
+GO
+
+ALTER TABLE [dbo].[alimento] CHECK CONSTRAINT [FK_alimento_alimento_genero]
 GO
 
 ALTER TABLE [dbo].[alimento]  WITH CHECK ADD  CONSTRAINT [FK_alimento_alimento_tipo] FOREIGN KEY([id_alimento_tipo])
@@ -75,12 +90,13 @@ go
 CREATE TABLE [dbo].[usuario](
 	[id_usuario] [int] IDENTITY(1,1) NOT NULL,
 	[usuario] [varchar](50) NOT NULL,
+	[clave] [varchar](100) NOT NULL,
 	[nombre] [varchar](100) NOT NULL,
 	[apellido] [varchar](100) NOT NULL,
 	[email] [varchar](100) NOT NULL,
 	[sexo] [char](1) NOT NULL,
 	[f_nacimiento] [date] NOT NULL,
-	[f_registro] [datetime] NOT NULL,
+	[f_registro] [datetime] NOT NULL DEFAULT (getdate()),
 	[f_ultimo_ingreso] [datetime] NULL,
 	[id_usuario_tipo] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
@@ -89,8 +105,6 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
-ALTER TABLE [dbo].[usuario] ADD  DEFAULT (getdate()) FOR [f_registro]
 GO
 ALTER TABLE [dbo].[usuario]  WITH CHECK ADD  CONSTRAINT [FK_usuario_usuario_tipo] FOREIGN KEY([id_usuario_tipo])
 REFERENCES [dbo].[usuario_tipo] ([id_usuario_tipo])
@@ -112,7 +126,7 @@ CREATE TABLE [dbo].[usuario_datos](
 	[id_usuario] [int] NOT NULL,
 	[altura_cm] [int] NOT NULL,
 	[peso_kg] [decimal](5, 2) NOT NULL,
-	[f_ingreso] [datetime] NOT NULL,
+	[f_ingreso] [datetime] NOT NULL DEFAULT (getdate()),
 	[id_usuario_objetivo] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -120,9 +134,6 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[usuario_datos] ADD  DEFAULT (getdate()) FOR [f_ingreso]
 GO
 ALTER TABLE [dbo].[usuario_datos]  WITH CHECK ADD  CONSTRAINT [FK_usuario_datos_usuario_objetivo] FOREIGN KEY([id_usuario_objetivo])
 REFERENCES [dbo].[usuario_objetivo] ([id_usuario_objetivo])
@@ -169,16 +180,13 @@ CREATE TABLE [dbo].[usuario_muro](
 	[id_usuario_muro] [int] IDENTITY(1,1) NOT NULL,
 	[id_usuario] [int] NOT NULL,
 	[estado] [text] NOT NULL,
-	[f_publicacion] [datetime] NOT NULL,
+	[f_publicacion] [datetime] NOT NULL DEFAULT (getdate()),
 PRIMARY KEY CLUSTERED 
 (
 	[id_usuario_muro] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[usuario_muro] ADD  DEFAULT (getdate()) FOR [f_publicacion]
 GO
 ALTER TABLE [dbo].[usuario_muro]  WITH CHECK ADD  CONSTRAINT [FK_usuario_muro_usuario] FOREIGN KEY([id_usuario])
 REFERENCES [dbo].[usuario] ([id_usuario])
@@ -231,7 +239,7 @@ CREATE TABLE [dbo].[blog_nota](
 	[id_blog_nota] [int] IDENTITY(1,1) NOT NULL,
 	[nota] [text] NOT NULL,
 	[titulo_nota] [varchar](50) NOT NULL,
-	[f_publicacion] [datetime] NOT NULL,
+	[f_publicacion] [datetime] NOT NULL DEFAULT (getdate()),
 	[id_usuario] [int] NOT NULL,
  CONSTRAINT [PK_blog_nota] PRIMARY KEY CLUSTERED 
 (
@@ -239,9 +247,6 @@ CREATE TABLE [dbo].[blog_nota](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[blog_nota] ADD  DEFAULT (getdate()) FOR [f_publicacion]
 GO
 
 ALTER TABLE [dbo].[blog_nota]  WITH CHECK ADD  CONSTRAINT [FK_blog_nota_usuario] FOREIGN KEY([id_usuario])
@@ -255,7 +260,7 @@ CREATE TABLE [dbo].[usuario_receta](
 	[id_usuario_receta] [int] IDENTITY(1,1) NOT NULL,
 	[receta] [text] NOT NULL,
 	[titulo_receta] [varchar](50) NOT NULL,
-	[f_publicacion] [datetime] NOT NULL,
+	[f_publicacion] [datetime] NOT NULL DEFAULT (getdate()),
 	[id_usuario] [int] NOT NULL,
  CONSTRAINT [PK_usuario_receta] PRIMARY KEY CLUSTERED 
 (
@@ -263,9 +268,6 @@ CREATE TABLE [dbo].[usuario_receta](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[usuario_receta] ADD  DEFAULT (getdate()) FOR [f_publicacion]
 GO
 
 ALTER TABLE [dbo].[usuario_receta]  WITH CHECK ADD  CONSTRAINT [FK_usuario_receta_usuario] FOREIGN KEY([id_usuario])
@@ -308,7 +310,7 @@ GO
 CREATE TABLE [dbo].[consulta_mensaje](
 	[id_mensaje] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [text] NOT NULL,
-	[f_mensaje] [datetime] NOT NULL,
+	[f_mensaje] [datetime] NOT NULL DEFAULT (getdate()),
 	[id_consulta_conversacion] [int] NOT NULL,
  CONSTRAINT [PK_consulta_mensaje] PRIMARY KEY CLUSTERED 
 (
@@ -316,9 +318,6 @@ CREATE TABLE [dbo].[consulta_mensaje](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-GO
-
-ALTER TABLE [dbo].[consulta_mensaje] ADD  DEFAULT (getdate()) FOR [f_mensaje]
 GO
 
 ALTER TABLE [dbo].[consulta_mensaje]  WITH CHECK ADD  CONSTRAINT [FK_consulta_mensaje_consulta_conversacion] FOREIGN KEY([id_consulta_conversacion])
