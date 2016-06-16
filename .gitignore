@@ -5,3 +5,6 @@
 
 # archivos de configuracion
 *.config
+
+#Otros
+*.cache
