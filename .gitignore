@@ -2,6 +2,7 @@
 *.csproj
 *.csproj.user
 *.sln
+*.suo
 
 # archivos de configuracion
 *.config
