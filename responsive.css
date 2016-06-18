@@ -1,0 +1,120 @@
+@media (max-width:1078px) {
+    .img-resp img {
+        padding-top: 135px;
+    }
+    
+}
+/*mobile*/
+@media (max-width:992px) {
+    .img-resp img {
+        padding-top: 0px !important;
+        float: left;
+    }
+    .text_h2 {
+        line-height: 39px;
+        font-size: 27px;
+    }
+    .txt-resp{
+       padding-bottom: 10px !important;
+    }
+    nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        line-height: 60px !important;
+        vertical-align: middle;
+        height: 64px !important;
+    }
+      .number{
+              top: 60px !important;
+              margin-left:17px !important;
+      }
+    .divtop {
+    padding-left: 0px !important; 
+    }
+   
+ }
+/*Fin mobile*/
+@media (max-width:900px){
+	.card .card-content .card-title {
+		line-height: 30px !important;
+	}
+	.card .card-title {
+		font-size: 18px !important;
+	}
+      .menu-left ul{
+        padding: 0px;
+    }
+    .menu-left ul li a i{
+            font-size: 21px;
+    vertical-align: middle;
+    }
+    .datosFood li {
+    padding: 20px !important;
+    }
+}
+@media(max-width:760px){
+    .seccionHeader h3, .reporte h3, seccionFood h3 {
+        font-size: 30px;
+    }
+}
+@media (max-width:680px) {
+    .txt-resp h3 {
+            font-size: 30px !important;
+        }
+}
+@media (max-width:600px) {
+     .menu-left ul li{
+        display: inline-block;
+        margin-right: 40px;
+        text-align: center;
+    }
+  
+}
+@media (max-width:500px) {
+    .txt-resp h3 {
+            font-size: 20px !important;
+            line-height: 29px !important;
+        }
+   .titulo-index h1{
+           font-size: 51px !important;
+               line-height: 53px;
+   }
+    .text_h2 {
+        line-height: 30px;
+        font-size: 18px;
+        margin-bottom: 9%;
+    }
+    .menu-left ul li {
+    margin-right: 30px;
+    }
+    .altercalendar {
+    font-size: 16px !important;
+    }
+    .seccionFood h3{
+         font-size: 30px;
+    }
+    .datosFood li {
+    padding: 10px !important;
+    }
+    .datosFood li h6 {
+    font-size: 16px;
+    }
+    .infogral li h6 {
+    font-size: 15px;
+    }
+}
+@media(max-width:448px){
+    .menu-left ul li {
+        margin-right: 5px;
+    }
+    .reporte h3, .calendar, .seccionFood h3{
+        padding-left: 0px;
+    }
+}
+@media(max-width:360px){
+    .menu-left ul li a {
+    font-size: 15px !important;
+    }
+    .seccionHeader h3{
+    font-size: 24px !important;
+    }
+}
+

@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Buscador";
+    Layout = "~/Views/LayoutHeader&Footer.cshtml";
+}
+
+<div class="row seccionHeader">
+    <div class="container">
+        <h3>Buscador de Alimentos</h3>
+    </div>
+</div><!--/seccionHeader-->
+
+<div class="container">
+    <div class="row">
+        <div class="col l3 m3 s12 menu-left">
+            <h5>Mis Alimentos</h5>
+            <ul>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">mode_edit</i>Editar</a></li>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">clear</i>Eliminar</a></li>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">add</i>Agregar</a></li>
+            </ul>
+        </div>
+
+        <div class="col l9 m9 s12 home">
+            <div class="divtop">
+                <button class="btn waves-effect orange btn-buscar" type="submit" name="action">
+                    <i class="material-icons">search</i>
+                </button>
+                <input type="text" size="30" class="altercalendar" placeholder="Buscar alimentos">
+            </div>
+            <div class="list-food">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <h5>Resultados de Búsqueda</h5>
+                        <ul class="resultados">
+                            <li>
+                                <a href="#">
+                                    <h6>Carne</h6>
+                                    <p>Porción básica, 7282 calorías</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>Carne</h6>
+                                    <p>Porción básica, 7282 calorías</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>Carne</h6>
+                                    <p>Porción básica, 7282 calorías</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>Carne</h6>
+                                    <p>Porción básica, 7282 calorías</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/row-->
+            </div><!--/listfood-->
+        </div><!--/col9-->
+    </div><!--/row-->
+</div><!--/container-->
+

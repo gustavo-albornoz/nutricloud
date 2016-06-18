@@ -1,0 +1,21 @@
+﻿.sobre{
+    position:relative !important;
+}
+.number{
+    position: absolute;
+    background: #F50808;
+    color: white;
+    border-radius: 18px;
+    padding: 6px;
+    line-height: 7px !important;
+    top: 6px;
+    margin-left: 21px;
+    font-size: 11px;
+}
+.user{
+    font-weight: 700;
+    color: #1070AB;
+}
+nav .nav-wrapper i .sobre{
+    height: 52px !important;
+}

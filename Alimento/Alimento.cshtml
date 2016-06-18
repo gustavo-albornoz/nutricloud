@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Alimento";
+    Layout = "~/Views/LayoutHeader&Footer.cshtml";
+}
+
+<div class="row seccionFood">
+    <div class="container">
+        <h3>Hamburguesa Doble</h3>
+    </div>
+</div><!--/seccionFood-->
+
+<div class="container">
+    <div class="row">
+        <div class="col l3 m3 s12 menu-left">
+            <h5>Mis Alimentos</h5>
+            <ul>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">mode_edit</i>Editar</a></li>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">clear</i>Eliminar</a></li>
+                <li><a href="#"><i class="material-icons orange-text text-darken-3 left-i">add</i>Agregar</a></li>
+            </ul>
+        </div>
+
+        <div class="col l9 m9 s12 home">
+            <div class="divtop">
+                <h5>Información Nutricional por Porción</h5>
+                <ul class="datosFood">
+                    <li>
+                        <h6>197</h6>
+                        <span>Calorías</span>
+                    </li>
+                    <li>
+                        <h6>197</h6>
+                        <span>Proteínas</span>
+                    </li>
+                    <li>
+                        <h6>197</h6>
+                        <span>Grasas</span>
+                    </li>
+                    <li>
+                        <h6>197</h6>
+                        <span>Carbo.</span>
+                    </li>
+                </ul>
+                <div class="row mtop">
+                    <div class="col s12 ingresos-food">
+                        <div class="row nobottom">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Ingresar a:</option>
+                                    <option value="1">Almuerzo</option>
+                                    <option value="2">Merienda</option>
+                                    <option value="3">Cena</option>
+                                    <option value="3">Aperitivos</option>
+                                </select>
+                             </div>
+                        </div>
+                        <div class="row nobottom">
+                            <div class="input-field col s12">
+                                <input id="porcion" type="text" class="validate altercalendar porcion">
+                                <label for="porcion">Porción:</label>
+                            </div>
+                        </div>
+                        <div class="row nobottom">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Elegir Medida:</option>
+                                    <option value="1">200 grs.</option>
+                                    <option value="2">20 kg.</option>
+                                    <option value="3">90 grs.</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect orange btn-ingresar" type="submit" name="action">
+                            Ingresar
+                        </button>
+                 </div>
+            </div><!--/row-->
+            <div class="row mtop">
+                <h4 class="listaHeader">Información General</h4>
+               <ul class="infogral">
+                   <li>
+                       <h6>Calorías</h6>
+                       <span>20g.</span>
+                   </li>
+                   <li>
+                       <h6>Carbohidratos</h6>
+                       <span>20g.</span>
+                   </li>
+                   <li>
+                       <h6>Azúcares</h6>
+                       <span>20g.</span>
+                   </li>
+                   <li>
+                       <h6>Sodio</h6>
+                       <span>20g.</span>
+                   </li>
+                   <li>
+                       <h6>Agua</h6>
+                       <span>20g.</span>
+                   </li>
+               </ul>
+            </div><!--/row-->
+                <div class="row mtop">
+                    <h4 class="listaHeader">Vitaminas</h4>
+                    <ul class="infogral">
+                        <li>
+                            <h6>Vitamina A</h6>
+                            <span>20 mg.</span>
+                        </li>
+                        <li>
+                            <h6>Vitamina B</h6>
+                            <span>20g.</span>
+                        </li>
+                        <li>
+                            <h6>Vitamina C</h6>
+                            <span>20g.</span>
+                        </li>
+                    </ul>
+                </div><!--/row-->
+                <div class="row mtop">
+                    <h4 class="listaHeader">Minerales</h4>
+                    <ul class="infogral">
+                        <li>
+                            <h6>Calcio</h6>
+                            <span>20 mg.</span>
+                        </li>
+                        <li>
+                            <h6>Cobre</h6>
+                            <span>20g.</span>
+                        </li>
+                        <li>
+                            <h6>Hierros</h6>
+                            <span>20g.</span>
+                        </li>
+                    </ul>
+                </div><!--/row-->
+        </div><!--/col9-->
+    </div><!--/row-->
+</div><!--/container-->
+
