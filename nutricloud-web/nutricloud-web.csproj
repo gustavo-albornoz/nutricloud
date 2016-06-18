@@ -117,13 +117,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\DateTimePicker.min.css" />
+    <Content Include="Content\font\material-design-icons\LICENSE.txt" />
+    <Content Include="Content\font\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="Content\img\01.jpg" />
+    <Content Include="Content\img\02.jpg" />
+    <Content Include="Content\img\03.jpg" />
+    <Content Include="Content\img\04.jpg" />
+    <Content Include="Content\img\05.jpg" />
+    <Content Include="Content\img\06.jpg" />
+    <Content Include="Content\img\83c34c27165447.56360b2e4b904.jpg" />
+    <Content Include="Content\img\bgTop2.jpg" />
+    <Content Include="Content\img\bgTop3.jpg" />
+    <Content Include="Content\img\calendar.gif" />
+    <Content Include="Content\img\calendar.jpg" />
+    <Content Include="Content\img\calendar.png" />
+    <Content Include="Content\img\calendario.png" />
+    <Content Include="Content\img\card1.jpg" />
+    <Content Include="Content\img\card2.jpg" />
+    <Content Include="Content\img\card3.jpg" />
+    <Content Include="Content\img\card4.jpg" />
+    <Content Include="Content\img\keyboard-right-arrow-button.png" />
+    <Content Include="Content\img\left-arrow-angle.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\responsive.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui.theme.min.css" />
+    <Content Include="Content\LayoutStyle.css" />
+    <Content Include="Content\materialize.css" />
+    <Content Include="Content\materialize.min.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\DateTimePicker.min.js" />
+    <Content Include="scripts\init.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\materialize.js" />
+    <Content Include="scripts\materialize.min.js" />
+    <Content Include="scripts\modernizr.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,6 +176,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Index\Index.cshtml" />
+    <Content Include="Content\img\83c34c27165447.56360b2e4b904.psd" />
+    <Content Include="Content\img\card2.psd" />
+    <Content Include="Content\font\Amateur-Naked.ttf" />
+    <Content Include="Content\font\material-design-icons\Material-Design-Icons.eot" />
+    <Content Include="Content\font\material-design-icons\Material-Design-Icons.ttf" />
+    <Content Include="Content\font\material-design-icons\Material-Design-Icons.woff" />
+    <Content Include="Views\LayoutHeader&amp;Footer.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,7 +194,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Content\font\roboto\" />
+    <Folder Include="Content\img\icon\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

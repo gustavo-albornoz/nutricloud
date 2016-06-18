@@ -398,10 +398,9 @@ a.modal-action.modal-close.green-nutri.btn-flat {
 /*  Home  */
 .home{
      border: solid 1px rgba(212, 212, 212, 0.56);
+     padding: 20px;
 }
-.menu-right{
-    border: solid 1px rgba(212, 212, 212, 0.56);
-}
+
 .alimento::after{
     content: "-";
     margin-left: 6px;
@@ -412,10 +411,113 @@ a.modal-action.modal-close.green-nutri.btn-flat {
     padding-bottom: 9px;
     border-bottom: solid 1px rgba(61, 135, 8, 0.53);
 }
-.list-food h4{
 
+.calendar{
+       padding-left: 20px;
+        margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+.hasDatepicker{
+        width: 0% !important;
+        text-align: center !important;
+        border-bottom: 2px solid #3D8708 !important;
+        font-size: 19px !important;
+}
+.altercalendar{
+        width: 70% !important;
+        text-align: center !important;
+        border-bottom: 2px solid #3D8708 !important;
+        font-size: 19px !important;
+}
+.ui-datepicker-trigger{
+    vertical-align: middle;
+    margin-left: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 3px #888888;
+}
+.ui-datepicker-trigger:hover {
+     width: 44px;
+    height: 49px;
+}
+.ui-widget-header {
+     border: none !important;
+    background:none !important; 
+    color: #3D8708 !important;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.ui-datepicker th, .ui-widget {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
+.ui-icon-circle-triangle-w {
+    background-position: -95px -17px !important;
+}
+.ui-icon-circle-triangle-e {
+    background-position: -35px -17px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none !important;
+    background: rgba(118, 226, 40, 0.32) !important;
+    font-weight: normal;
+    color: #555555;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid rgba(211, 211, 211, 0.46) !important;
+}
+.card-content h4{
+        color: #272727 !important;
+        font-size: 26px !important;
+}
+.card a{
+    color: #3D8708 !important;
+}
+.list-food .card .card-content{
+        padding: 0px !important;
+    padding-left: 20px !important;
+}
+.menu-left ul {
+    list-style-type: none;
+    line-height: 36px;
+    padding: 20px;
+}
+.menu-left ul li{
+    list-style-type: none;
+    padding-bottom: 9px;
+    /*border-bottom: solid 1px rgba(61, 135, 8, 0.46);*/
+}
+.menu-left h5{
+        font-size: 20px;
+    border-bottom: solid 1px #CAC8C8;
+    padding-bottom: 7px;
+}
+.menu-left ul li a{
+        color: #3D8708;
+    font-size: 18px;
+}
+.menu-left ul li a:hover {
+    /* text-decoration: underline; */
+    color: #2B5F06;
+    font-size: 20px;
+}
+.home h3, .reporte h3{
+        padding-left: 36px;
+        font-size: 33px;
+}
+.menu-right ul li a i{
+    margin-right: 8px;
+    vertical-align:middle;
+}
+nav .nav-wrapper i {
+    line-height: 26px !important;
+    vertical-align: middle;
+    height: 26px !important;
+}
+.menu-left{
+    padding: 20px;
+}
+    
 
 
 

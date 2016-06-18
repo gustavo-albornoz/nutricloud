@@ -3,6 +3,7 @@
         padding-top: 135px;
     }
 }
+/*mobile*/
 @media (max-width:992px) {
     .img-resp img {
         padding-top: 0px !important;
@@ -15,7 +16,17 @@
     .txt-resp{
        padding-bottom: 10px !important;
     }
+    nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        line-height: 60px !important;
+        vertical-align: middle;
+        height: 64px !important;
+    }
+    .number{
+        top: 60px !important;
+    }
+   
  }
+/*Fin mobile*/
 @media (max-width:900px){
 	.card .card-content .card-title {
 		line-height: 30px !important;
@@ -23,11 +34,31 @@
 	.card .card-title {
 		font-size: 18px !important;
 	}
+      .menu-left ul{
+        padding: 0px;
+    }
+    .menu-left ul li a i{
+            font-size: 21px;
+    vertical-align: middle;
+    }
+}
+@media(max-width:760px){
+    .home h3, .reporte h3 {
+        font-size: 30px;
+    }
 }
 @media (max-width:680px) {
     .txt-resp h3 {
             font-size: 30px !important;
         }
+}
+@media (max-width:600px) {
+     .menu-left ul li{
+        display: inline-block;
+        margin-right: 40px;
+        text-align: center;
+    }
+  
 }
 @media (max-width:500px) {
     .txt-resp h3 {
@@ -43,4 +74,19 @@
         font-size: 18px;
         margin-bottom: 9%;
     }
+    .menu-left ul li {
+    margin-right: 30px;
+    }
+    .altercalendar {
+    font-size: 16px !important;
 }
+}
+@media(max-width:448px){
+    .menu-left ul li {
+        margin-right: 5px;
+    }
+    .home h3, .reporte h3, .calendar{
+        padding-left: 0px;
+    }
+}
+

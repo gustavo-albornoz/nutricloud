@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nutricloud-web", "nutricloud-web\nutricloud-web.csproj", "{B664439D-EFD1-4350-B933-8C6B8CA8A766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nutricloud-web.Tests", "nutricloud-web.Tests\nutricloud-web.Tests.csproj", "{DF270156-E44A-4B06-9260-D711650685FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B664439D-EFD1-4350-B933-8C6B8CA8A766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B664439D-EFD1-4350-B933-8C6B8CA8A766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B664439D-EFD1-4350-B933-8C6B8CA8A766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B664439D-EFD1-4350-B933-8C6B8CA8A766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF270156-E44A-4B06-9260-D711650685FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF270156-E44A-4B06-9260-D711650685FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF270156-E44A-4B06-9260-D711650685FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF270156-E44A-4B06-9260-D711650685FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
